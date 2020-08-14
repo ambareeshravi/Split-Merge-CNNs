@@ -105,7 +105,7 @@ class Trainer:
 		# Define optimizer and Loss function
 		optimizer = torch.optim.Adam(model.parameters(), lr = Config.LearningRate, betas=Config.Betas)
 		LossCriterion = nn.BCELoss()
-		if n_classes > 1:
+		if n_classes > 2:
 			LossCriterion = nn.CrossEntropyLoss()
 		
 		# Create variables to record history and store the best models
